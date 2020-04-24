@@ -16,7 +16,10 @@ module NavigationHelpers
     #Given I am on the EventNest homepage
     
       when /^the EventNest homepage$/ 
-        welcome_index_path
+        welcome_login_path
+        
+      when /^Events$/
+        events_index_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -1,14 +1,31 @@
 Rails.application.routes.draw do
+    
+
+
+  match 'auth/:provider/callback', :to => 'sessions#create', :via => [:get, :post]
+  match 'auth/failure', :to => 'sessions#failure', :via => [:get, :post]
+  get '/login', :to => 'sessions#new', :as => :login
+  get '/logout', :to => 'sessions#destroy', :as => :logout
+  get '/cleanup', :to => 'sessions#cleanup', :as => :cleanup
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  get 'welcome/index'
-  root 'welcome#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  resources :users
+  
+  get 'welcome/login' 
+  root 'welcome#login'
+  
+  get 'users/login'
 
+  get 'events/index'
+  
+  get 'users/signup'
+
+  
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
