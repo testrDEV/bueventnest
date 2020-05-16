@@ -1,0 +1,25 @@
+<!-- %h1 Welcome
+%div
+= link_to 'Register or Log In with GitHub', '/auth/github'
+%div -->
+
+%html
+    %head
+        %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+        %link{:href => "/default.css", :rel => "stylesheet", :type => "text/css"}/
+        %title EventNest Homepage
+    %body
+        .container
+            #header.span-24
+                %p.heading
+                    Welcome to BU EventNest
+                .span-24
+                    = yield
+            #footer.span-24
+            %fieldset
+                %legend
+                    %h2 Log in
+                %br
+                %a.button{:href => "/auth/github"}Signup or Log In With GitHub
+                %br
+            %br
