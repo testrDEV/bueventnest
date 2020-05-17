@@ -1006,3 +1006,636 @@ Processing by EventsController#index as HTML
   Rendered layouts/_footer.html.haml (1.2ms)
 Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDetailsToUsers (20200516182237)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "bnumber" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "course_level" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "major" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "dob" date
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "year" varchar[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20200516182237"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEvents (20200516191550)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "location" varchar, "start_date" date, "end_date" date, "contact" varchar, "seats" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20200516191550"]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddRsvpToUser (20200517004246)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "rsvp" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20200517004246"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_authorizations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_authorizations_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:51:08 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (454.2ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 478ms (Views: 471.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:51:08 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:54:22 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (215.5ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 239ms (Views: 232.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:54:23 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:57:04 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (152.7ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 179ms (Views: 172.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:57:05 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:57:58 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (216.4ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 240ms (Views: 233.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:57:58 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:57:58 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:58:56 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (135.2ms)
+  Rendered layouts/_header.html.haml (1.3ms)
+Completed 200 OK in 158ms (Views: 152.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:58:56 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 02:58:56 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 02:58:57.003610"], ["updated_at", "2020-05-17 02:58:57.003610"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 02:58:57.024849"], ["updated_at", "2020-05-17 02:58:57.024849"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:00:18 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (219.2ms)
+  Rendered layouts/_header.html.haml (1.5ms)
+Completed 200 OK in 253ms (Views: 246.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:00:18 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:00:18 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:00:18.991974"], ["updated_at", "2020-05-17 03:00:18.991974"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:00:19.029440"], ["updated_at", "2020-05-17 03:00:19.029440"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:02:47 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (221.0ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 245ms (Views: 238.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:02:48 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:02:48 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:02:48.068570"], ["updated_at", "2020-05-17 03:02:48.068570"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:02:48.087632"], ["updated_at", "2020-05-17 03:02:48.087632"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:05:15 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (146.7ms)
+  Rendered layouts/_header.html.haml (1.3ms)
+Completed 200 OK in 172ms (Views: 165.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:05:15 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:05:15 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:05:15.528684"], ["updated_at", "2020-05-17 03:05:15.528684"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:05:15.548976"], ["updated_at", "2020-05-17 03:05:15.548976"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/github" for 127.0.0.1 at 2020-05-17 03:05:15 +0000
+(github) Request phase initiated.
+Started GET "/login/oauth/authorize?client_id=6220dc6bcb02379ebcf3&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Fgithub%2Fcallback&response_type=code&scope[]=read%3Auser&scope[]=user%3Aemail&state=5b47657efa4c57a0d626887de911f9c5f153c60a77bea4ca" for 127.0.0.1 at 2020-05-17 03:05:15 +0000
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:06:54 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (138.6ms)
+  Rendered layouts/_header.html.haml (1.3ms)
+Completed 200 OK in 162ms (Views: 155.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:06:54 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:06:54 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:06:54.432186"], ["updated_at", "2020-05-17 03:06:54.432186"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:06:54.452379"], ["updated_at", "2020-05-17 03:06:54.452379"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/github" for 127.0.0.1 at 2020-05-17 03:06:54 +0000
+(github) Request phase initiated.
+Started GET "/login/oauth/authorize?client_id=6220dc6bcb02379ebcf3&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Fgithub%2Fcallback&response_type=code&scope[]=read%3Auser&scope[]=user%3Aemail&state=bd74d617b94c6febc864f5ca77b43f7fc1e2e49ce443587e" for 127.0.0.1 at 2020-05-17 03:06:54 +0000
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:12:01 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (254.3ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 277ms (Views: 271.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:12:01 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:12:01 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:12:01.432209"], ["updated_at", "2020-05-17 03:12:01.432209"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:12:01.452912"], ["updated_at", "2020-05-17 03:12:01.452912"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:16:00 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (211.2ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 234ms (Views: 228.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:16:00 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:16:00 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:16:00.997076"], ["updated_at", "2020-05-17 03:16:00.997076"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:16:01.015658"], ["updated_at", "2020-05-17 03:16:01.015658"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:16:50 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (215.3ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 239ms (Views: 232.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:16:51 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:16:51 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:16:51.108854"], ["updated_at", "2020-05-17 03:16:51.108854"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:16:51.127950"], ["updated_at", "2020-05-17 03:16:51.127950"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:17:31 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (216.1ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 239ms (Views: 233.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:17:31 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:17:31 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:17:31.566935"], ["updated_at", "2020-05-17 03:17:31.566935"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:17:31.587186"], ["updated_at", "2020-05-17 03:17:31.587186"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:18:05 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (226.8ms)
+  Rendered layouts/_header.html.haml (1.5ms)
+Completed 200 OK in 252ms (Views: 245.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:18:05 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:18:05 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:18:05.711745"], ["updated_at", "2020-05-17 03:18:05.711745"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:18:05.732948"], ["updated_at", "2020-05-17 03:18:05.732948"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:18:58 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (218.7ms)
+  Rendered layouts/_header.html.haml (1.5ms)
+Completed 200 OK in 242ms (Views: 236.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:18:58 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.7ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:18:59 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (0.6ms)
+  Rendered layouts/_header.html.haml (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:18:59.040434"], ["updated_at", "2020-05-17 03:18:59.040434"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:18:59.061561"], ["updated_at", "2020-05-17 03:18:59.061561"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:30:31 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (137.2ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 160ms (Views: 154.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:30:32.105106"], ["updated_at", "2020-05-17 03:30:32.105106"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:30:32.125260"], ["updated_at", "2020-05-17 03:30:32.125260"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:31:21 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (151.3ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 177ms (Views: 170.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:31:21.449382"], ["updated_at", "2020-05-17 03:31:21.449382"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:31:21.469995"], ["updated_at", "2020-05-17 03:31:21.469995"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:34:33 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (216.6ms)
+  Rendered layouts/_header.html.haml (1.5ms)
+Completed 200 OK in 241ms (Views: 234.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:34:33.470181"], ["updated_at", "2020-05-17 03:34:33.470181"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:34:33.491202"], ["updated_at", "2020-05-17 03:34:33.491202"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/github" for 127.0.0.1 at 2020-05-17 03:34:33 +0000
+(github) Request phase initiated.
+Started GET "/login/oauth/authorize?client_id=6220dc6bcb02379ebcf3&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Fgithub%2Fcallback&response_type=code&scope[]=read%3Auser&scope[]=user%3Aemail&state=4a1fc72ee21f3858063fab1abc04539c0ce678e71a41cd25" for 127.0.0.1 at 2020-05-17 03:34:33 +0000
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:39:00 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (133.4ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 157ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:39:00.807333"], ["updated_at", "2020-05-17 03:39:00.807333"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:39:00.827885"], ["updated_at", "2020-05-17 03:39:00.827885"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/github" for 127.0.0.1 at 2020-05-17 03:39:00 +0000
+(github) Request phase initiated.
+Started GET "/login/oauth/authorize?client_id=6220dc6bcb02379ebcf3&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Fgithub%2Fcallback&response_type=code&scope[]=read%3Auser&scope[]=user%3Aemail&state=31139e56e19abe6bddd96862ed17ece91b5198f3467613b6" for 127.0.0.1 at 2020-05-17 03:39:00 +0000
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:41:49 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (155.7ms)
+  Rendered layouts/_header.html.haml (1.4ms)
+Completed 200 OK in 182ms (Views: 175.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:41:50.183067"], ["updated_at", "2020-05-17 03:41:50.183067"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:41:50.203885"], ["updated_at", "2020-05-17 03:41:50.203885"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/github" for 127.0.0.1 at 2020-05-17 03:41:50 +0000
+(github) Request phase initiated.
+Started GET "/login/oauth/authorize?client_id=6220dc6bcb02379ebcf3&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Fgithub%2Fcallback&response_type=code&scope[]=read%3Auser&scope[]=user%3Aemail&state=886c09cf5f87e056c20232a569b0605d7cf2ff5f180253e8" for 127.0.0.1 at 2020-05-17 03:41:50 +0000
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/welcome/login" for 127.0.0.1 at 2020-05-17 03:43:39 +0000
+Processing by WelcomeController#login as HTML
+  Rendered welcome/login.html.haml within layouts/application (136.1ms)
+  Rendered layouts/_header.html.haml (1.3ms)
+Completed 200 OK in 161ms (Views: 154.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Akshay Shinde"], ["email", "ashinde3@binghamton.edu"], ["created_at", "2020-05-17 03:43:39.889570"], ["updated_at", "2020-05-17 03:43:39.889570"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mAuthorization Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authorizations" WHERE ("authorizations"."uid" = '54924198' AND "authorizations"."provider" = 'github') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "authorizations" ("provider", "uid", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["provider", "github"], ["uid", "54924198"], ["user_id", 2], ["created_at", "2020-05-17 03:43:39.910074"], ["updated_at", "2020-05-17 03:43:39.910074"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/github" for 127.0.0.1 at 2020-05-17 03:43:39 +0000
+(github) Request phase initiated.
+Started GET "/login/oauth/authorize?client_id=6220dc6bcb02379ebcf3&redirect_uri=http%3A%2F%2Fwww.example.com%2Fauth%2Fgithub%2Fcallback&response_type=code&scope[]=read%3Auser&scope[]=user%3Aemail&state=9f19ae1428afa7d70d36b7eda8cc8a9a97448ca35cfcb52e" for 127.0.0.1 at 2020-05-17 03:43:39 +0000
+  [1m[35m (0.1ms)[0m  rollback transaction

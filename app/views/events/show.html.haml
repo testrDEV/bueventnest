@@ -1,0 +1,36 @@
+%h2.text-center #{@event.name}
+
+.bg-light.p-3.m-3.rounded-lg
+  %ul.list-group.list-group-flush
+    %li.list-group-item
+      %b Description:
+      =@event.description
+    %li.list-group-item
+      %b Location:   
+      =@event.location
+    %li.list-group-item
+      %b Start Date:   
+      =@event.start_date      
+    %li.list-group-item
+      %b End Date:   
+      =@event.end_date
+    %li.list-group-item
+      %b Contact:   
+      =@event.contact      
+    %li.list-group-item
+      %b Number of seats:   
+      =@event.seats
+  .row.mt-2
+    .col-lg-6
+      %div
+        = button_to "Join", rsvp_path, :method => :post, :class => 'btn btn-primary btn-block btn-lg rounded-pill', :id => 'join_club'
+      %div
+        = button_to "Leave", rsvp_path, :method => :post, :class => 'btn btn-primary btn-block btn-lg rounded-pill', :id => 'leave_club'
+    .col-lg-6
+      
+  %div
+    .row.mt-3
+      .col-lg-6
+        = button_to "Edit", edit_event_path(@event), :method => :get, :class => 'btn btn-warning btn-block btn-lg rounded-pill', :id => 'edit_event'
+      .col-lg-6
+        = button_to "Delete", event_path(@event), :method => :delete, :class => 'btn btn-warning btn-block btn-lg rounded-pill', :id => 'delete_event'

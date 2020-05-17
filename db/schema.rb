@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200421121112) do
+ActiveRecord::Schema.define(version: 20200517004246) do
 
   create_table "authorizations", force: :cascade do |t|
     t.string   "provider"
@@ -23,11 +23,29 @@ ActiveRecord::Schema.define(version: 20200421121112) do
 
   add_index "authorizations", ["user_id"], name: "index_authorizations_on_user_id"
 
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "location"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "contact"
+    t.integer  "seats"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "bnumber"
+    t.string   "course_level"
+    t.string   "major"
+    t.date     "dob"
+    t.string   "year"
+    t.string   "rsvp"
   end
 
 end

@@ -1,0 +1,18 @@
+%ul.nav.nav-tabs
+  %li.nav-item
+  = link_to 'Create Events', new_event_path, class: "nav-link active"
+  %li.nav-item
+  = link_to 'Show events', events_path(@event), class: "nav-link"
+  // %li.nav-item
+  // = link_to 'Edit User Profile', edit_user_path, class: "nav-link"
+    
+%h2.text-center.my-3 Home
+
+%div
+%h4.text-center.my-5
+= link_to '+RSVP', events_path
+
+- @events.each do |event_id|
+  - @event = Event.find(event_id)
+  .bg-light.my-3.p-3.rounded-lg 
+    %h3.text-center= link_to "#{@event.name}", event_path(@event)

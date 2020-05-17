@@ -18,8 +18,7 @@ module NavigationHelpers
       when /^the EventNest homepage$/ 
         welcome_login_path
         
-      when /^Events$/
-        events_index_path
+        
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

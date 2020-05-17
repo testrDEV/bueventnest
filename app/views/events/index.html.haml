@@ -1,11 +1,21 @@
-%h1 Events 
+%ul.nav.nav-tabs
+  %li.nav-item
+  = link_to 'Create Events', new_event_path(@event), class: "nav-link active"
+  %li.nav-item
+  = link_to 'Show events', events_path, class: "nav-link"
+%h2.text-center.mb-3 Looking for an event to join, RSVP now!
 
-<!-- = link_to 'Cleanup', cleanup_path -->
+.row.mt-3
+  .col-md-6
+    = form_tag events_path, :method => :get do 
+      .form-group
+        = select :event, :sort, options_for_select(Event.sort_criteria, :selected => @sort), {}, :name => 'sort', :class => 'form-control mb-2', :id => 'sort_criteria'
+        = submit_tag 'Sort', :class => 'btn btn-primary btn-block btn-lg rounded-pill form-control', :id => 'sort_submit'
+%p is this working?   
 
-%li
-    %a{:href => "#"} Upcoming Events
-%li
-    %a{:href => "#"} RSVP 
-%li
-    %a{:href => "#"} Your Events
-%br
+
+- @events.each do |event|
+  .row.bg-light.my-5.p-3.rounded-lg
+    .col-md-10
+      %h3= link_to "#{event.name}", event_path(event)
+      %p= event.description

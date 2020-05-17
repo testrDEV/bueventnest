@@ -1,0 +1,23 @@
+%h2.text-center User Profile
+
+= form_tag user_path(@user), :method => :put, :class => 'bg-light p-3 my-3 rounded-lg' do
+  .form-row
+    .form-group.col-md-6
+      = label :user, :id, 'Course Level'
+      = select :user, :course_level, ['Under Grad', 'Grad'], {}, :class => 'form-control', :id => 'course_level'
+    .form-group.col-md-6
+      = label :user, :id, 'B-Number'
+      = text_field :user, 'bnumber', :placeholder => 'Bxxxxxxxx', :type => 'text', :class => 'form-control', :id => 'bnumber'
+  .form-row
+    .form-group.col-md-6
+      = label :user, :id, 'Major'
+      = select :user, :major, ['CS','IE','Bio Med'], {}, :class => 'form-control', :id => 'major'
+    .form-group.col-md-6
+      = label :user, :id, 'Year'
+      = text_field :user, year,['Freshmen','Sophomore','Junior','Senior','Masters','Phd'] ,{}, :class => 'form-control', :id => 'year'
+    .form-group.col-md-6
+      = label :user, :id, 'Date of Birth'
+      = text_field :user, 'dob', :type => 'date', :class => 'form-control', :id => 'dob'
+
+  .col-md-12.text-center.mt-3
+    = submit_tag 'Submit', :class => 'btn btn-secondary btn-lg rounded-0', :id => 'submit_button'
