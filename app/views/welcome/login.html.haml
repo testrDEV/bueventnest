@@ -1,12 +1,13 @@
-.row
-  .col-xs-7.col-sm-6.col-lg-8
+%body.bg-secondary
+.row.mt-3
+  .col-md-7.col-sm-6.col-lg-8
     = image_tag 'eventnest_logo.png', alt: 'EventNest Logo', class: 'w-100 rounded-lg my-3'
     %h4 Host Events, Join Events, Have fun! 
-    %p.text-secondary.lead It's not just about ideas. It's about making ideas happen. DO IT!!
-  .col-xs-7.col-sm-6.col-lg-4.bg-light.p-5.rounded-lg
+    %p.text-white-80.lead It's not just about ideas. It's about making ideas happen. DO IT!!
+  .col-md-7.col-sm-6.col-lg-3.bg-secondary.p-5.rounded
     %h3 Log in or Sign up With GitHub
     .form-group.mt-5
-      = image_tag 'Octocat.jpg', alt: 'GitHub Logo', class: 'img-thumbnail rounded-circle w-2 '    
+      = image_tag 'Octocat.jpg', alt: 'GitHub Logo', class: 'img-thumbnail rounded w-2 '
       = button_to 'GitHub', '/auth/github/', :method => :get, :class => 'btn btn-primary btn-lg btn-block rounded', :id => 'github'
     
 // .row

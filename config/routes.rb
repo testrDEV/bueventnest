@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'homepage/index'
 
   match 'auth/:provider/callback', :to => 'sessions#create', :via => [:get, :post]
-  match 'auth/failure', :to => 'sessions#failure', :via => [:get, :post]
+  match 'auth/failure', :to => 'sessions#failure', :via => [:get,:post]
   get '/login', :to => 'sessions#new', :as => :login
   get '/logout', :to => 'sessions#destroy', :as => :logout
   get '/cleanup', :to => 'sessions#cleanup', :as => :cleanup
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :users
   resources :events
   
-  get 'welcome/login' 
+  get 'welcome/login' , :as => :welcome_login, :via =>[:get,:post]
   root 'welcome#login'
   
   

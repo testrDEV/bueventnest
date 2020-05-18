@@ -1,16 +1,22 @@
 %h2.text-center Create Event
 
-= form_tag events_path, :class => 'bg-light p-3 mt-3 rounded-lg' do
+%ul.nav.nav-tabs
+  %li.nav-item
+  = link_to 'Create Events', new_event_path(@event), class: "nav-link active"
+  %li.nav-item
+  = link_to 'Show events', events_path, class: "nav-link active"
+
+= form_tag events_path, :class => 'bg-success p-3 mt-3 rounded-lg' do
   .form-row
     .form-group.col-md-6
       = label :event, 'Name'
-      = text_field :event, :name, :type => 'text', :class => 'form-control', :id => 'name'
+      = text_field :event, :name, :type => 'text', :class => 'form-control', :id => 'name', :placeholder => 'enter name'
     .form-group.col-md-6   
       = label :event, 'Description'
-      = text_field :event, :description, :type => 'text', :class => 'form-control', :id => 'description'
+      = text_field :event, :description, :type => 'text', :class => 'form-control', :id => 'description', :placeholder => 'enter event description'
     .form-group.col-md-6
       = label :event, 'location'
-      = text_field :event, :location, :type => 'text', :class => 'form-control', :id => 'location'
+      = text_field :event, :location, :type => 'text', :class => 'form-control', :id => 'location', :placeholder => 'enter location'
     .form-group.col-md-6
       = label :event, 'Start Date'
       = date_field :event, :start_date,:type => 'date', :class => 'form-control', :id => 'start_date'
@@ -19,10 +25,10 @@
       = date_field :event, :end_date,:type => 'date', :class => 'form-control', :id => 'end_date'
     .form-group.col-md-6
       = label :event, 'Contact'
-      = text_field :event,:contact, :type => 'text', :class => 'form-control', :id => 'contact'
+      = text_field :event,:contact, :type => 'text', :class => 'form-control', :id => 'contact', :placeholder => 'enter contact'
     .form-group.col-md-6
       = label :event, :id, 'Number of Seats'
-      = number_field :event, :seats, :type => 'integer', :class => 'form-control', :id => 'seats'
-  .col-md-12.text-center
-    = submit_tag 'Save', :class => 'btn btn-secondary btn-lg rounded-pill', :id => 'save_changes'
+      = number_field :event, :seats, :type => 'integer', :class => 'form-control', :id => 'seats', :placeholder => 'number of seats'
+  .col-md-15.text-center
+    = submit_tag 'Save', :class => 'btn btn-secondary btn-outline-success btn-lg rounded', :id => 'save_changes'
     
