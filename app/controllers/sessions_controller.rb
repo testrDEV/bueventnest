@@ -55,7 +55,7 @@ class SessionsController < ApplicationController
                   session[:user_id] = auth.user.id
                   self.current_user = auth.user
                   flash[:notice] = "#{message}"
-                  redirect_to edit_user_path (user) and return
+                  redirect_to homepage_index_path and return
                 else
                   raise InvalidEmailError, "Sorry young padawan, only @binghamton.edu users can pass"
                 end
@@ -64,7 +64,7 @@ class SessionsController < ApplicationController
         end
        
       rescue DoubleLoginError, NotCurrentUserError,InvalidEmailError, Exception => exception
-          flash[:error] = "#{exception.class}:  #{exception.message}"
+          flash[:error] = " #{exception.message}"
           redirect_to auth_failure_path 
       end        
     end

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   
   #gaurds against unauthorized access
   def can_proceed
-    redirect_to welcome_logn_path and return unless current_user
+    redirect_to welcome_login_path and return unless current_user
   end  
   
   

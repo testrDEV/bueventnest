@@ -15,10 +15,29 @@ module NavigationHelpers
     
     #Given I am on the EventNest homepage
     
-      when /^the EventNest homepage$/ 
+      when /^the Welcome Page$/ 
         welcome_login_path
         
+      when (/^the "Home"$/) 
+        homepage_index_path  
         
+      when (/^the "Failure Page"$/) 
+        auth_failure_path   
+        
+      when (/^the "Events Page"$/)
+        events_path
+        
+      when (/^the "Create Event Page"$/)
+        new_event_path
+        
+      when (/^the "Show Events Page"$/)
+        events_path
+        
+      when (/^the "Event Show Page" for "(.*)"$/)
+        event_path(Event.find_by_name($1))
+        
+      when (/^the "rsvp page"$/)
+        rsvp_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

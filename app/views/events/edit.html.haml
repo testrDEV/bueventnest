@@ -1,6 +1,12 @@
 %h2.text-center Edit Event
 
-= form_tag events_path, :class => 'bg-light p-3 mt-3 rounded-lg' do
+%ul.nav.nav-tabs
+  %li.nav-item
+  = link_to 'Create Events', new_event_path(@event), class: "nav-link active"
+  %li.nav-item
+  = link_to 'Show events', events_path, class: "nav-link active"
+
+= form_tag events_path, :class => 'bg-success p-3 mt-3 rounded-lg' do
   .form-row
     .form-group.col-md-6
       = label :event, 'Name'
@@ -19,9 +25,9 @@
       = date_field :event, :end_date,:type => 'date', :class => 'form-control', :id => 'end_date'
     .form-group.col-md-6
       = label :event, 'Contact'
-      = text_field :event,  :type => 'text', :class => 'form-control', :id => 'contact'
+      = text_field :event, :contact,:type => 'text', :class => 'form-control', :id => 'contact'
     .form-group.col-md-6
       = label :event, :id, 'Number of Seats'
       = number_field :event, :seats, :type => 'integer', :class => 'form-control', :id => 'seats'
   .col-md-12.text-center
-    = submit_tag 'Save', :class => 'btn btn-secondary btn-lg rounded-pill', :id => 'save_changes'
+    = submit_tag 'Save ', :class => 'btn btn-secondary btn-outline-success btn-lg rounded', :id => 'save_changes'

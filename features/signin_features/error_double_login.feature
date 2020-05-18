@@ -1,7 +1,7 @@
 Feature: I want to see double login error
 
 Background:
-  Given I am on the EventNest homepage
+  Given I am on the Welcome Page
   
   Given the following users exist:
   | name           | email                   |
@@ -11,12 +11,15 @@ Background:
   | provider | uid      | user_id |
   | github   | 54924198 | 2       | 
   
-  When I Log in or Sign up With "GitHub"
-  Then I am on the "Home Page"
+  And I should see "Log in or Sign up With GitHub"
+  When I press "GitHub"
+  And I should see "Home"
+  
   
 @omniauth_test
 Scenario: Try to log in again without logging out
-  Given I visit the "EventNest Page"
-  When I Log in or Sign up With "GitHub"
+  Given I visit the Welcome Page
+  And I should see "Log in or Sign up With GitHub"
+  When I press "GitHub"
   Then I am on the "Failure Page"
-  And I should see "Login inside a Login, is this inception? You're already logged in"
+  And I should see "Already Logged In."

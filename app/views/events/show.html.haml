@@ -1,6 +1,6 @@
 %h2.text-center #{@event.name}
 
-.bg-light.p-3.m-3.rounded-lg
+.bg-dark.p-3.m-3.rounded-lg
   %ul.list-group.list-group-flush
     %li.list-group-item
       %b Description:
@@ -20,17 +20,14 @@
     %li.list-group-item
       %b Number of seats:   
       =@event.seats
-  .row.mt-2
-    .col-lg-6
-      %div
-        = button_to "Join", rsvp_path, :method => :post, :class => 'btn btn-primary btn-block btn-lg rounded-pill', :id => 'join_club'
-      %div
-        = button_to "Leave", rsvp_path, :method => :post, :class => 'btn btn-primary btn-block btn-lg rounded-pill', :id => 'leave_club'
-    .col-lg-6
-      
   %div
     .row.mt-3
-      .col-lg-6
-        = button_to "Edit", edit_event_path(@event), :method => :get, :class => 'btn btn-warning btn-block btn-lg rounded-pill', :id => 'edit_event'
-      .col-lg-6
-        = button_to "Delete", event_path(@event), :method => :delete, :class => 'btn btn-warning btn-block btn-lg rounded-pill', :id => 'delete_event'
+      .col-lg-3
+        = button_to "RSVP", rsvp_path, :method => :post, :class => 'btn btn-success btn-block btn-lg rounded-pill', :id => 'rsvp_event'
+      .col-lg-3
+        = button_to "Leave", rsvp_path, :method => :post, :class => 'btn btn-warning btn-block btn-lg rounded-pill', :id => 'leave_event'
+    
+      .col-lg-3
+        = button_to "Edit", edit_event_path(@event), :method => :get, :class => 'btn btn-secondary btn-block btn-lg rounded-pill', :id => 'edit_event'
+      .col-lg-3
+        = button_to "Delete", event_path(@event), :method => :delete, :class => 'btn btn-danger btn-block btn-lg rounded-pill', :id => 'delete_event'
