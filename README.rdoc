@@ -12,6 +12,6 @@ Gem "2.6.0"
   1. VERY IMPORTANT = FORK the repo first, then Clone it. 
   2. install all the gem with 'bundle install --without production'
   3. migrate the database with 'rake db:migrate' and 'rake db:seed' 
-  4. to run the server locally 'rails s -p 8080'
+  4. to run the server locally on your 'aws cloud9' conviornment do 'rails s -p 8080'
   
   
